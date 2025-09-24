@@ -5,3 +5,7 @@ export async function fetchPosts() {
 
   return res.json();
 }
+
+export async function fetchPostDetail({ params }) {
+  // https://jsonplaceholder.typicode.com/posts/${params.id}
+}

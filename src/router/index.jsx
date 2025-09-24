@@ -5,6 +5,7 @@ import AboutPage from "../pages/AboutPage";
 import ContactPage from "../pages/ContactPage";
 import PostsPage from "../pages/PostsPage";
 import { fetchPosts } from "../api/posts";
+import PostDetail from "../pages/PostDetail";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         path: "posts",
         element: <PostsPage />,
         loader: fetchPosts,
+      },
+      {
+        path: "posts/:id",
+        element: <PostDetail />,
       },
     ],
   },
