@@ -1,9 +1,10 @@
 import React from "react";
-import { useLoaderData, Link } from "react-router";
+import { useLoaderData, Link, useNavigate } from "react-router";
 
 export default function PostsPage() {
   const posts = useLoaderData();
   // console.log(posts);
+  const navigate = useNavigate();
 
   return (
     <div style={{ textAlign: "left" }}>
@@ -21,6 +22,7 @@ export default function PostsPage() {
           ))
         }
       </ul>
+      <button onClick={() => navigate("/")}>Go to Home</button>
     </div>
   );
 }

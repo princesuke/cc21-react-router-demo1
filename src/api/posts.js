@@ -7,5 +7,11 @@ export async function fetchPosts() {
 }
 
 export async function fetchPostDetail({ params }) {
-  // https://jsonplaceholder.typicode.com/posts/${params.id}
+  //   console.log(params);
+
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${params.id}`
+  );
+
+  return res.json();
 }
