@@ -1,9 +1,12 @@
 import React from "react";
-import { Outlet } from "react-router";
+import { Outlet, useNavigation } from "react-router";
 import Header from "./Header";
 import Navbar from "./Navbar";
 
 export default function Layout() {
+  const navigation = useNavigation();
+  console.log(navigation.state);
+
   return (
     <div>
       <Header />
@@ -15,6 +18,14 @@ export default function Layout() {
           padding: "20px",
         }}
       >
+        {navigation.state === "loading" && (
+          <div>
+            <h3 className="text-red-500">
+              กำลังโหลดข้อมูลอยู่ รอสักครู่นะ....
+            </h3>
+          </div>
+        )}
+
         {/* เจาะช่องที่เปลี่ยนเนื้อหาตอนเปลี่ยนลิงค์ */}
         <Outlet />
       </div>
