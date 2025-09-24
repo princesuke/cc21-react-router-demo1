@@ -12,11 +12,12 @@ export default function Layout() {
       <Header />
       <Navbar />
       <div
-        style={{
-          backgroundColor: "#e0e0e0",
-          border: "1px solid #ccc",
-          padding: "20px",
-        }}
+        className="rounded-md shadow-md p-8"
+        // style={{
+        //   backgroundColor: "#e0e0e0",
+        //   border: "1px solid #ccc",
+        //   padding: "20px",
+        // }}
       >
         {navigation.state === "loading" && (
           <div>
