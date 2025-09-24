@@ -23,7 +23,7 @@ a:hover {
 }
 
 .active {
-  color: red;
+  color: blue;
   font-weight: 600;
   font-size: large;
 }
